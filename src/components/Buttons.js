@@ -23,8 +23,25 @@ const PrimaryButton = styled(Button) `
     color: #fff;
 
     &:hover {
-        background-color: ${defaultTheme.primaryColorHover};
+        background-color: ${defaultTheme.primaryHoverColor};
         color: ${defaultTheme.textColorOnPrimary};
+    }
+
+    &:focus {
+        outline: 3px solid ${defaultTheme.primaryColor};
+        outline-offset: 2px;
+    }
+
+    &:active {
+        background-color: ${defaultTheme.primaryActiveColor};
+        border-color: ${defaultTheme.primaryActiveColor};
+        color: ${defaultTheme.textColorOnPrimary};
+    }
+
+    &:disabled {
+        background-color: ${defaultTheme.disabled};
+        color: ${defaultTheme.textOnDisabled};
+        cursor: not-allowed;
     }
 `;
 
@@ -34,8 +51,24 @@ export const SecondaryButton = styled(Button) `
     color: ${defaultTheme.primaryColor};
 
     &:hover {
-        background-color: ${defaultTheme.secondaryColorHover};
+        background-color: ${defaultTheme.secondaryHoverColor};
         color: ${defaultTheme.primaryColor};
+    }
+
+    &:focus {
+        outline: 3px solid ${defaultTheme.primaryColor};
+        outline-offset: 2px;
+    }
+
+    &:active {
+        background-color: ${defaultTheme.secondaryActiveColor};
+    }
+
+    &:disabled {
+        background: none;
+        border-color: ${defaultTheme.disabled};
+        color: ${defaultTheme.textOnDisabled};
+        cursor: not-allowed;
     }
 `;
 
@@ -44,15 +77,30 @@ export const TertirayButton = styled(Button) `
     color: ${defaultTheme.primaryColor};
     // text-decoration: underline;
 
+    svg {
+        transition: all 0.2s;
+        margin-left: 8px;
+    }
+
     &:hover {
         svg {
             transform: translateX(5px);
         }
     }
 
-    svg {
-        transition: all 0.2s;
-        margin-left: 8px;
+    &:focus {
+        transition: 0s;
+        text-decoration: underline;
+    }
+
+    &:active {
+        color: ${defaultTheme.primaryActiveColor};
+    }
+
+    &:disabled {
+        background-color: none;
+        color: ${defaultTheme.textOnDisabled};
+        cursor: not-allowed;
     }
 `;
 

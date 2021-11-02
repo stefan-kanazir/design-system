@@ -10,9 +10,9 @@ const App = () => {
     return (
         <div>
             <h1>Hello World</h1>
-            <PrimaryButton>Learn more</PrimaryButton>
-            <SecondaryButton>Learn more</SecondaryButton>
-            <TertirayButton>Learn more<FontAwesomeIcon icon={faLongArrowAltRight} /></TertirayButton>
+            <PrimaryButton disabled>Learn more</PrimaryButton>
+            <SecondaryButton disabled>Learn more</SecondaryButton>
+            <TertirayButton disabled>Learn more<FontAwesomeIcon icon={faLongArrowAltRight} /></TertirayButton>
             <GlobalStyle />
         </div>
     )
