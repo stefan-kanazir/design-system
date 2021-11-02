@@ -1,13 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import PrimaryButton from './components/Buttons';
+import PrimaryButton, { SecondaryButton, TertirayButton } from './components/Buttons';
 
 const App = () => {
     return (
         <div>
             <h1>Hello World</h1>
             <PrimaryButton>Learn more</PrimaryButton>
+            <SecondaryButton>Learn more</SecondaryButton>
+            <TertirayButton>Learn more</TertirayButton>
         </div>
     )
 }
