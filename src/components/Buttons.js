@@ -1,8 +1,17 @@
 import styled from 'styled-components';
 import { defaultTheme, typeScale } from '../utils';
+import { applyStyleModifiers } from 'styled-components-modifiers';
 
-const Primary = "#0066CC";
-
+const BUTTON_MODIFIERS = {
+    small: () => `
+        font-size: ${typeScale.helperText};
+        padding: 8px;
+    `,
+    large: () => `
+    font-size: ${typeScale.h5};
+    padding: 16px 24px;
+    `
+}
 
 const Button = styled.button`
     padding: 12px 24px;
@@ -43,6 +52,8 @@ const PrimaryButton = styled(Button) `
         color: ${defaultTheme.textOnDisabled};
         cursor: not-allowed;
     }
+
+    ${applyStyleModifiers(BUTTON_MODIFIERS)}
 `;
 
 export const SecondaryButton = styled(Button) `
@@ -70,6 +81,8 @@ export const SecondaryButton = styled(Button) `
         color: ${defaultTheme.textOnDisabled};
         cursor: not-allowed;
     }
+
+    ${applyStyleModifiers(BUTTON_MODIFIERS)}
 `;
 
 export const TertirayButton = styled(Button) `
@@ -102,6 +115,8 @@ export const TertirayButton = styled(Button) `
         color: ${defaultTheme.textOnDisabled};
         cursor: not-allowed;
     }
+
+        ${applyStyleModifiers(BUTTON_MODIFIERS)}
 `;
 
 
