@@ -8,8 +8,95 @@ const BUTTON_MODIFIERS = {
         padding: 8px;
     `,
     large: () => `
-    font-size: ${typeScale.h5};
-    padding: 16px 24px;
+        font-size: ${typeScale.h5};
+        padding: 16px 24px;
+    `,
+
+    // WARNING
+    warning: () => `
+        background-color: ${defaultTheme.status.warningColor};
+        color: ${defaultTheme.textColorInverted};
+
+        &:hover, &:focus {
+            background-color: ${defaultTheme.status.warningColorHover};
+            outline: 3px solid ${defaultTheme.status.warningColorHover};
+        }
+
+        &:active {
+            background-color: ${defaultTheme.status.warningColorActive};
+        }
+    `,
+    primaryButtonWarning: () => `
+        background-color: ${defaultTheme.status.warningColor};
+        color: ${defaultTheme.textColorInverted};
+    `,
+    secondaryButtonWarning: () => `
+        background: none;
+        border: 2px solid ${defaultTheme.status.warningColor};
+        color: ${defaultTheme.status.warningColor};
+
+        &:hover, &:focus {
+            color: ${defaultTheme.textColorInverted};
+        }
+
+        &:active {
+            background-color: ${defaultTheme.status.warningColorActive};
+        }
+    `,
+
+    // ERROR
+    error: () => `
+        background: none;
+        color: ${defaultTheme.status.errorColor};
+        &:hover, &:focus {
+        background-color: ${defaultTheme.status.errorColorHover};
+        outline: 3px solid ${defaultTheme.status.errorColorHover};
+        outline-offset: 2px;
+        border: 2px solid transparent;
+        }
+
+        &:active {
+            background-color: ${defaultTheme.status.errorColorActive};
+        }
+    `,
+    primaryButtonError: () => `
+        background-color: ${defaultTheme.status.errorColor};
+        color: ${defaultTheme.textColorInverted};
+        border: 2px solid ${defaultTheme.status.errorColor};
+
+        &:hover, &:focus {
+            color: ${defaultTheme.textColorInverted};
+        }
+    `,
+    secondaryButtonError: () => `
+        border: 2px solid ${defaultTheme.status.errorColor};
+    `,
+
+    // SUCCESS
+    success: () => `
+        background: none;
+        color: ${defaultTheme.status.successColor};
+        &:hover, &:focus {
+        background-color: ${defaultTheme.status.successColorHover};
+        outline: 3px solid ${defaultTheme.status.successColorHover};
+        outline-offset: 2px;
+        border: 2px solid transparent;
+        }
+
+        &:active {
+            background-color: ${defaultTheme.status.successColorActive};
+        }
+    `,
+    primaryButtonSuccess: () => `
+        background-color: ${defaultTheme.status.successColor};
+        color: ${defaultTheme.textColorInverted};
+
+        &:hover, &:focus {
+            color: ${defaultTheme.textColorInverted};
+        }
+    `,
+    secondaryButtonSuccess: () => `
+        border: 2px solid ${defaultTheme.status.warningColor};
     `
 }
 

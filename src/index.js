@@ -10,9 +10,9 @@ const App = () => {
     return (
         <div>
             <h1>Hello World</h1>
-            <PrimaryButton modifiers="small">Learn more</PrimaryButton>
-            <SecondaryButton disabled>Learn more</SecondaryButton>
-            <TertirayButton disabled>Learn more<FontAwesomeIcon icon={faLongArrowAltRight} /></TertirayButton>
+            <PrimaryButton modifiers={["small", "warning"]}>Learn more</PrimaryButton>
+            <SecondaryButton modifiers={["error", "large", "primaryButtonError"]}>Learn more</SecondaryButton>
+            <TertirayButton modifiers={["small", "success", "primaryButtonSuccess"]}>Learn more<FontAwesomeIcon icon={faLongArrowAltRight} /></TertirayButton>
             <GlobalStyle />
         </div>
     )
