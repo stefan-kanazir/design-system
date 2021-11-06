@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { defaultTheme, typeScale } from '../utils';
 import { applyStyleModifiers } from 'styled-components-modifiers';
 
-const BUTTON_MODIFIERS = {
+export const BUTTON_MODIFIERS = {
     small: () => `
         font-size: ${typeScale.helperText};
         padding: 8px;
@@ -112,7 +112,7 @@ const Button = styled.button`
     transition: 0.2s linear;
 `
 
-const PrimaryButton = styled(Button) `
+export const PrimaryButton = styled(Button) `
     //CSS
     background-color: ${defaultTheme.primaryColor};
     border: none;
@@ -205,6 +205,3 @@ export const TertirayButton = styled(Button) `
 
         ${applyStyleModifiers(BUTTON_MODIFIERS)}
 `;
-
-
-export default PrimaryButton;
