@@ -43,6 +43,19 @@ export const BUTTON_MODIFIERS = {
             background-color: ${defaultTheme.status.warningColorActive};
         }
     `,
+    tertiaryButtonWarning: () => `
+        background: none;
+        color: ${defaultTheme.status.warningColor};
+
+        &:hover, &:focus {
+            background: none;
+            color: ${defaultTheme.status.warningColorActive}};
+        }
+
+        &:active {
+            transform: scale(0.975);
+        }
+    `,
 
     // ERROR
     error: () => `
@@ -70,17 +83,27 @@ export const BUTTON_MODIFIERS = {
     `,
     secondaryButtonError: () => `
         border: 2px solid ${defaultTheme.status.errorColor};
+
+        &:hover, &:focus {
+            color: ${defaultTheme.textColorInverted};
+        }
+    `,
+    tertiaryButtonError: () => `
+        color: ${defaultTheme.status.errorColor};
+
+        &:hover, &:focus {
+            color: ${defaultTheme.status.errorColorActive};
+        }
     `,
 
     // SUCCESS
     success: () => `
         background: none;
         color: ${defaultTheme.status.successColor};
+
         &:hover, &:focus {
         background-color: ${defaultTheme.status.successColorHover};
         outline: 3px solid ${defaultTheme.status.successColorHover};
-        outline-offset: 2px;
-        border: 2px solid transparent;
         }
 
         &:active {
@@ -96,8 +119,19 @@ export const BUTTON_MODIFIERS = {
         }
     `,
     secondaryButtonSuccess: () => `
-        border: 2px solid ${defaultTheme.status.warningColor};
-    `
+        border: 2px solid ${defaultTheme.status.successColor};
+
+        &:hover, &:focus {
+            color: ${defaultTheme.textColorInverted};
+        }
+    `,
+    tertiaryButtonSuccess: () => `
+        color: ${defaultTheme.status.successColor};
+
+        &:hover, &:focus {
+            color: ${defaultTheme.successColorActive};
+        }
+    `,
 }
 
 const Button = styled.button`
@@ -175,7 +209,7 @@ export const SecondaryButton = styled(Button) `
 export const TertirayButton = styled(Button) `
     background: none;
     color: ${defaultTheme.primaryColor};
-    // text-decoration: underline;
+    text-decoration: underline;
 
     svg {
         transition: all 0.2s;
@@ -194,7 +228,8 @@ export const TertirayButton = styled(Button) `
     }
 
     &:active {
-        color: ${defaultTheme.primaryActiveColor};
+        // color: ${defaultTheme.primaryActiveColor};
+        transform: scale(0.975);
     }
 
     &:disabled {
