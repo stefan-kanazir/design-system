@@ -61,6 +61,7 @@ export const BUTTON_MODIFIERS = {
     error: () => `
         background: none;
         color: ${defaultTheme.status.errorColor};
+
         &:hover, &:focus {
         background-color: ${defaultTheme.status.errorColorHover};
         outline: 3px solid ${defaultTheme.status.errorColorHover};
@@ -91,7 +92,11 @@ export const BUTTON_MODIFIERS = {
     tertiaryButtonError: () => `
         color: ${defaultTheme.status.errorColor};
 
-        &:hover, &:focus {
+        &:hover {
+
+        }
+
+        &:active, &:focus {
             color: ${defaultTheme.status.errorColorActive};
         }
     `,
@@ -128,8 +133,8 @@ export const BUTTON_MODIFIERS = {
     tertiaryButtonSuccess: () => `
         color: ${defaultTheme.status.successColor};
 
-        &:hover, &:focus {
-            color: ${defaultTheme.successColorActive};
+        &:active, &:focus {
+            color: ${defaultTheme.status.successColorActive};
         }
     `,
 }
@@ -216,19 +221,11 @@ export const TertirayButton = styled(Button) `
         margin-left: 8px;
     }
 
-    &:hover {
-        svg {
-            transform: translateX(5px);
-        }
-    }
-
     &:focus {
-        transition: 0s;
-        text-decoration: underline;
+        color: ${defaultTheme.primaryActiveColor};
     }
 
     &:active {
-        // color: ${defaultTheme.primaryActiveColor};
         transform: scale(0.975);
     }
 
@@ -238,5 +235,5 @@ export const TertirayButton = styled(Button) `
         cursor: not-allowed;
     }
 
-        ${applyStyleModifiers(BUTTON_MODIFIERS)}
+    ${applyStyleModifiers(BUTTON_MODIFIERS)}
 `;

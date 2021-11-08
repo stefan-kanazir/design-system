@@ -53,7 +53,9 @@ const App = () => {
                 <SecondaryButton modifiers="large">Secondary Button</SecondaryButton>
                 <TertirayButton modifiers="large">Tertiray Button</TertirayButton>
             </div>
-            {/* <SignUpModal /> */}
+            {/* Modal Component */}
+            <h2>Modal</h2>
+            <SignUpModal />
             <GlobalStyle />
         </div>
     )
