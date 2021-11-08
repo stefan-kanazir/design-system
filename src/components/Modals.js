@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { useSpring, animated } from 'react-spring'
 import { typeScale } from '../utils';
 import { Illustrations } from '../assets';
 import { PrimaryButton } from './Buttons';
@@ -34,13 +35,20 @@ const SignUpText = styled.p`
     text-align: center;
 `;
 
-export const SignUpModal = () => {
+export const SignUpModal = ({showModal, setShowModal}) => {
+    const animation = useSpring({
+        opacity: showModal ? 1 : 0,
+        transform: showModal ? `translateX(0)` : `translateX(-100%)`
+    })
+
     return (
-        <ModalWrapper>
-            <img src={Illustrations.SignUp} alt="Sign up for an account" aria-hidden="true" />
-            <SignUpHeader>Sign Up</SignUpHeader>
-            <SignUpText>Sign up today to get access!</SignUpText>
-            <PrimaryButton>Notify me</PrimaryButton>
-        </ModalWrapper>
+        <animated.div style={animation}>
+            <ModalWrapper>
+                <img src={Illustrations.SignUp} alt="Sign up for an account" aria-hidden="true" />
+                <SignUpHeader>Sign Up</SignUpHeader>
+                <SignUpText>Sign up today to get access!</SignUpText>
+                <PrimaryButton>Notify me</PrimaryButton>
+            </ModalWrapper>
+        </animated.div>
     )
 }

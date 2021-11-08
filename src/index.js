@@ -1,12 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 
 import { PrimaryButton, SecondaryButton, SignUpModal, TertirayButton } from './components';
 import { GlobalStyle } from './utils';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faLongArrowAltRight } from '@fortawesome/free-solid-svg-icons';
+
+// Font Awesome
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { faLongArrowAltRight } from '@fortawesome/free-solid-svg-icons';
 
 const App = () => {
+    const [showModal, setShowModal] = useState(false);
+
     return (
         <div>
             <div>
@@ -54,8 +58,12 @@ const App = () => {
                 <TertirayButton modifiers="large">Tertiray Button</TertirayButton>
             </div>
             {/* Modal Component */}
-            <h2>Modal</h2>
-            <SignUpModal />
+            <div>
+                <h2>Modal</h2>
+                <SecondaryButton onClick={() => setShowModal(!showModal)}>Toggle Modal</SecondaryButton>
+                <SignUpModal showModal={showModal} setShowModal={setShowModal}/>
+            </div>
+
             <GlobalStyle />
         </div>
     )
