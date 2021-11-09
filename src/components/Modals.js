@@ -47,7 +47,7 @@ export const SignUpModal = ({showModal, setShowModal}) => {
                 <img src={Illustrations.SignUp} alt="Sign up for an account" aria-hidden="true" />
                 <SignUpHeader>Sign Up</SignUpHeader>
                 <SignUpText>Sign up today to get access!</SignUpText>
-                <PrimaryButton>Notify me</PrimaryButton>
+                <PrimaryButton>Sign up</PrimaryButton>
             </ModalWrapper>
         </animated.div>
     )

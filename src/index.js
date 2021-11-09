@@ -9,7 +9,7 @@ import { GlobalStyle } from './utils';
 // import { faLongArrowAltRight } from '@fortawesome/free-solid-svg-icons';
 
 const App = () => {
-    const [showModal, setShowModal] = useState(false);
+    const [showModal, setShowModal] = useState(true);
 
     return (
         <div>
