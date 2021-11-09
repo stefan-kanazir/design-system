@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 
-import { PrimaryButton, SecondaryButton, SignUpModal, TertirayButton } from './components';
+import { PrimaryButton, SecondaryButton, SignUpModal, TertiaryButton } from './components';
 import { GlobalStyle } from './utils';
 
 // Font Awesome
@@ -17,45 +17,45 @@ const App = () => {
                 <h2>Default</h2>
                 <PrimaryButton>Primary Button</PrimaryButton>
                 <SecondaryButton>Secondary Button</SecondaryButton>
-                <TertirayButton>Tertiray Button</TertirayButton>
+                <TertiaryButton>Tertiray Button</TertiaryButton>
             </div>
             <div>
                 <h2>Disabled</h2>
                 <PrimaryButton disabled>Primary Button</PrimaryButton>
                 <SecondaryButton disabled>Secondary Button</SecondaryButton>
-                <TertirayButton disabled>Tertiray Button</TertirayButton>
+                <TertiaryButton disabled>Tertiray Button</TertiaryButton>
             </div>
             {/* States */}
             <div>
                 <h2>Success</h2>
                 <PrimaryButton modifiers={["success", "primaryButtonSuccess"]}>Primary Button</PrimaryButton>
                 <SecondaryButton modifiers={["success", "secondaryButtonSuccess"]}>Secondary Button</SecondaryButton>
-                <TertirayButton modifiers="tertiaryButtonSuccess">Tertiray Button</TertirayButton>
+                <TertiaryButton modifiers="tertiaryButtonSuccess">Tertiray Button</TertiaryButton>
             </div>
             <div>
                 <h2>Warning</h2>
                 <PrimaryButton modifiers="warning">Primary Button</PrimaryButton>
                 <SecondaryButton modifiers={["warning", "secondaryButtonWarning"]}>Secondary Button</SecondaryButton>
-                <TertirayButton modifiers="tertiaryButtonWarning">Tertiray Button</TertirayButton>
+                <TertiaryButton modifiers="tertiaryButtonWarning">Tertiray Button</TertiaryButton>
             </div>
             <div>
                 <h2>Error</h2>
                 <PrimaryButton modifiers={["error", "primaryButtonError"]}>Primary Button</PrimaryButton>
                 <SecondaryButton modifiers={["error", "secondaryButtonError"]}>Secondary Button</SecondaryButton>
-                <TertirayButton modifiers="tertiaryButtonError">Tertiray Button</TertirayButton>
+                <TertiaryButton modifiers="tertiaryButtonError">Tertiray Button</TertiaryButton>
             </div>
             {/* Modifiers */}
             <div>
                 <h2>Small</h2>
                 <PrimaryButton modifiers="small">Primary Button</PrimaryButton>
                 <SecondaryButton modifiers="small">Secondary Button</SecondaryButton>
-                <TertirayButton modifiers="small">Tertiray Button</TertirayButton>
+                <TertiaryButton modifiers="small">Tertiray Button</TertiaryButton>
             </div>
             <div>
                 <h2>Large</h2>
                 <PrimaryButton modifiers="large">Primary Button</PrimaryButton>
                 <SecondaryButton modifiers="large">Secondary Button</SecondaryButton>
-                <TertirayButton modifiers="large">Tertiray Button</TertirayButton>
+                <TertiaryButton modifiers="large">Tertiray Button</TertiaryButton>
             </div>
             {/* Modal Component */}
             <div>

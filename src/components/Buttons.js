@@ -211,7 +211,7 @@ export const SecondaryButton = styled(Button) `
     ${applyStyleModifiers(BUTTON_MODIFIERS)}
 `;
 
-export const TertirayButton = styled(Button) `
+export const TertiaryButton = styled(Button) `
     background: none;
     color: ${defaultTheme.primaryColor};
     text-decoration: underline;
