@@ -25,11 +25,13 @@ const ModalWrapper = styled.div`
 
 const SignUpHeader = styled.h3`
     font-size: ${typeScale.header3};
+    font-family: "Roboto Mono", monospace;
     text-align: center;
 `;
 
 const SignUpText = styled.p`
     font-size: ${typeScale.paragraph};
+    font-family: "Roboto Mono", monospace;
     max-width: 70%;
     margin: 0 auto 1.5rem;
     text-align: center;
